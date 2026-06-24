@@ -48,22 +48,19 @@ int main()
             continue;
         }
 
-        int ind1 = -1;
-
-        for (int i = 0; i < n; i++)
-        {
-            if (isComposite(sum - a[i]))
-            {
-                ind1 = i;
-                break;
-            }
-        }
-
+        bool oddF = false;
         cout << n - 1 << endl;
         for (int i = 0; i < n; i++)
         {
-            if (i != ind1)
+
+            if (a[i] % 2 == 1 && !oddF)
+            {
+                oddF = true;
+            }
+            else
+            {
                 cout << i + 1 << " ";
+            }
         }
 
         cout << endl;
