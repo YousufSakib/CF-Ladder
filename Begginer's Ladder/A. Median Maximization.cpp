@@ -16,7 +16,6 @@ int main()
         int m = n / 2 + 1;
 
         cout << s / m << endl;
-        
     }
     return 0;
 }
